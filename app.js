@@ -8,7 +8,6 @@ var server_host = process.env.YOUR_HOST || '0.0.0.0';
 
 app.listen(server_port, server_host, function () {
     console.log("Aplicação online.");
-    buscado = [     ]
     buscado = [
         "um like e",
         "1 like e",
