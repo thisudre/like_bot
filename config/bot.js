@@ -1,5 +1,4 @@
 const Twit = require('twit');
-const randomItem = require('random-item');
 const ofensas = require('./ofensas-bobas.js');
 
 const bot = new Twit({
