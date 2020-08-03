@@ -1,5 +1,4 @@
 const Twit = require('twit');
-const ofensas = require('./ofensas-bobas.js');
 
 const bot = new Twit({
     consumer_key: process.env.consumer_key,
