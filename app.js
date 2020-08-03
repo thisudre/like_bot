@@ -8,6 +8,6 @@ var server_host = process.env.YOUR_HOST || '0.0.0.0';
 
 app.listen(server_port, server_host, function () {
     console.log("Aplicação online.");
-    buscado = ["um like", "1 like", "01 like", "um fav", "1 fav", "01 fav"]
+    buscado = ["um like e", "1 like e", "01 like e", "um fav e", "1 fav e", "01 fav e"]
     bot.buscaTweet(buscado);
 });
