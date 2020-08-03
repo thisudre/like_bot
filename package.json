@@ -1,5 +1,5 @@
 {
-  "name": "xingabot",
+  "name": "like_bot",
   "version": "1.0.0",
   "description": "Bot do twitter para curtir tweets",
   "main": "index.js",
