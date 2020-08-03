@@ -1,2 +1,1 @@
-# xingaBot
 # like_bot
