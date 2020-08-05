@@ -20,7 +20,7 @@ app.listen(server_port, server_host, function () {
         "01 like aqui",
         "um fav aqui",
         "1 fav aqui",
-        "01 fav aqui",
+        "01 fav aqui"
     ];
     bot.buscaTweet(buscado);
 });
