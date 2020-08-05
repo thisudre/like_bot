@@ -10,7 +10,7 @@ const bot = new Twit({
 bot.buscaTweet = function (buscado) {
     var stream = bot.stream('statuses/filter', {track: buscado})
     stream.on('tweet', function(tweet){
-        if (bot.verificarSubString(tweet.full_text, buscado))
+        if (bot.verificarSubString(tweet.text, buscado))
         {
             console.log("tweet encontrado");
             console.log(tweet);
