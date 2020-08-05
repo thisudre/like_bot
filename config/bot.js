@@ -11,7 +11,8 @@ bot.buscaTweet = function (buscado) {
     var stream = bot.stream('statuses/filter', {track: buscado})
     stream.on('tweet', function(tweet){
         console.log("tweet encontrado");
-        bot.curteTweet(tweet.id_str);
+        console.log(tweet);
+        // bot.curteTweet(tweet.id_str);
     });
 };
 
