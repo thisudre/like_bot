@@ -35,6 +35,7 @@ bot.verificarSubString = function (textoTweet, buscado) {
             return true;
         }
     });
+    return false;
 }
 
 module.exports = bot;
