@@ -14,7 +14,7 @@ bot.buscaTweet = function (buscado) {
         {
             console.log("tweet encontrado");
             console.log(tweet.text);
-            // bot.curteTweet(tweet.id_str);
+            bot.curteTweet(tweet.id_str);
         }
     });
 };
