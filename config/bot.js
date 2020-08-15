@@ -16,7 +16,7 @@ bot.buscaTweet = function (buscado) {
             console.log(tweet.text);
 
             if (!(bot.reverificarSubString(tweet.text))){
-                // bot.curteTweet(tweet.id_str);
+                bot.curteTweet(tweet.id_str);
                 console.log("tweet massa encontrado");
             }
         }
