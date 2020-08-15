@@ -48,7 +48,10 @@ bot.reverificarSubString = function (textoTweet) {
         "pulo",
         "me jogo",
         "me mato",
-        "me enforco"
+        "me enforco",
+        "desativo",
+        "desisto de mim",
+        "desisto de tudo",
     ];
     
     var retorno = false;
