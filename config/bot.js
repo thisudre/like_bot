@@ -14,7 +14,11 @@ bot.buscaTweet = function (buscado) {
         {
             console.log("tweet encontrado");
             console.log(tweet.text);
-            bot.curteTweet(tweet.id_str);
+
+            if (!(bot.reverificarSubString(tweet.text))){
+                // bot.curteTweet(tweet.id_str);
+                console.log("tweet massa encontrado");
+            }
         }
     });
 };
@@ -34,6 +38,24 @@ bot.verificarSubString = function (textoTweet, buscado) {
     buscado.forEach(texto => {
         if (textoTweet.indexOf(texto) == 0) {
             retorno = true;
+        }
+    });
+    return retorno;
+}
+
+bot.reverificarSubString = function (textoTweet) {
+    var substringRuim = [
+        "pulo",
+        "me jogo",
+        "me mato",
+        "me enforco"
+    ];
+    
+    var retorno = false;
+    substringRuim.forEach(texto => {
+        if (textoTweet.indexOf(texto) != -1) {
+            retorno = true;
+            console.log("Tweet triste encontrado");
         }
     });
     return retorno;
