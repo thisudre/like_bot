@@ -52,6 +52,8 @@ bot.reverificarSubString = function (textoTweet) {
         "desativo",
         "desisto de mim",
         "desisto de tudo",
+        "atiro-me",
+        "suicidio",
     ];
     
     var retorno = false;
