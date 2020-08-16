@@ -56,6 +56,9 @@ bot.reverificarSubString = function (textoTweet) {
         "atiro-me",
         "suicidio",
         "suicídio",
+        "deleto",
+        "cometo",
+        "m4t0",
     ];
     
     var retorno = false;
