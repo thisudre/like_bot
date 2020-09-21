@@ -29,7 +29,11 @@ bot.curteTweet = function (tweetPraCurtir) {
     }
     // curtir o tweet
     bot.post(
-        'favorites/create', params
+        'favorites/create', params, function (err, data, response) {
+            if(err){
+                console.log(err);
+            }
+        }
     )
 };
 
