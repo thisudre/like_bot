@@ -61,6 +61,8 @@ bot.reverificarSubString = function (textoTweet) {
         "deleto minha conta",
         "cometo",
         "m4t0",
+        "****",
+        "veneno",
     ];
     
     var retorno = false;
