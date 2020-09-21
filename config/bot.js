@@ -33,6 +33,7 @@ bot.curteTweet = function (tweetPraCurtir) {
             if(err){
                 console.log(err);
             }
+            console.log(data);
         }
     )
 };
