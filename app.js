@@ -11,6 +11,5 @@ app.listen(server_port, server_host, function () {
     console.log("Aplicação online.");
     buscado = [];
     buscado = gerador.gerarTextoBuscado(buscado);
-    console.log(buscado);
     bot.buscaTweet(buscado);
 });
