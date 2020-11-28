@@ -1,5 +1,5 @@
 const Twit = require('twit');
-
+const Filtro = require('./filtro.js');
 const bot = new Twit({
     consumer_key: process.env.consumer_key,
     consumer_secret: process.env.consumer_secret,
@@ -12,12 +12,10 @@ bot.buscaTweet = function (buscado) {
     stream.on('tweet', function(tweet){
         if(bot.verificarSubString(tweet.text, buscado))
         {
-            console.log("tweet encontrado");
-            console.log(tweet.text);
-
-            if (!(bot.reverificarSubString(tweet.text))){
+            console.log("tweet encontrado: " + tweet.text);
+            if (!(Filtro.temExpressaoRuim(tweet.text))){
                 bot.curteTweet(tweet.id_str);
-                console.log("Tweet massa encontrado e curtido!");
+                console.log("tweet curtido");
             }
         }
     });
@@ -33,7 +31,6 @@ bot.curteTweet = function (tweetPraCurtir) {
             if(err){
                 console.log(err);
             }
-            console.log(data);
         }
     )
 };
@@ -41,40 +38,8 @@ bot.curteTweet = function (tweetPraCurtir) {
 bot.verificarSubString = function (textoTweet, buscado) {
     var retorno = false;
     buscado.forEach(texto => {
-        if (textoTweet.indexOf(texto) == 0) {
-            retorno = true;
-        }
-    });
-    return retorno;
-}
-
-bot.reverificarSubString = function (textoTweet) {
-    var substringRuim = [
-        "pulo",
-        "me jogo",
-        "me mato",
-        "morro",
-        "me enforco",
-        "desativo",
-        "desisto de mim",
-        "desisto de tudo",
-        "desisto da minha vida",
-        "atiro-me",
-        "suicidio",
-        "suicídio",
-        "suicido",
-        "deleto minha conta",
-        "cometo",
-        "m4t0",
-        "****",
-        "veneno",
-    ];
-    
-    var retorno = false;
-    substringRuim.forEach(texto => {
         if (textoTweet.indexOf(texto) != -1) {
             retorno = true;
-            console.log("Tweet triste encontrado");
         }
     });
     return retorno;

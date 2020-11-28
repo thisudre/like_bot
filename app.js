@@ -1,5 +1,5 @@
 var app = require('./config/server.js');
-const bot = require('./config/bot.js');
+const bot = require('./models/bot.js');
 const gerador = require('./models/gerador-de-buscados.js');
 
 //Configura a porta disponível ou a porta 3000
