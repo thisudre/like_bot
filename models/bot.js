@@ -38,7 +38,7 @@ bot.curteTweet = function (tweetPraCurtir) {
 bot.verificarSubString = function (textoTweet, buscado) {
     var retorno = false;
     buscado.forEach(texto => {
-        if (textoTweet.indexOf(texto) != -1) {
+        if (textoTweet.indexOf(texto) == 0) {
             retorno = true;
         }
     });
