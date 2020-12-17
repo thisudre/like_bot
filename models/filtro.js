@@ -23,10 +23,11 @@ filtro.expressoesAFiltrar = [
 
 filtro.temExpressaoRuim = (textoTweet) => {
     const textoTweetMaiusculo = textoTweet.toUpperCase();
+    retorno = false;
     filtro.expressoesAFiltrar.forEach(expressao => {
-        if (textoTweetMaiusculo.indexOf(expressao.toUpperCase()) != -1) return true;
+        if (textoTweetMaiusculo.indexOf(expressao.toUpperCase()) != -1) retorno = true;
     })
-    return false;
+    return retorno;
 }
 
 module.exports = filtro;
