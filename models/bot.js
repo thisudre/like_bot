@@ -1,5 +1,6 @@
 const Twit = require('twit');
 const Filtro = require('./filtro.js');
+
 const bot = new Twit({
     consumer_key: process.env.consumer_key,
     consumer_secret: process.env.consumer_secret,
@@ -12,10 +13,10 @@ bot.buscaTweet = function (buscado) {
     stream.on('tweet', function(tweet){
         if(bot.verificarSubString(tweet.text, buscado))
         {
-            console.log("tweet encontrado: " + tweet.text);
+            console.log('tweet encontrado: ' + tweet.text);
             if (!(Filtro.temExpressaoRuim(tweet.text))){
                 bot.curteTweet(tweet.id_str);
-                console.log("tweet curtido");
+                console.log('tweet curtido');
             }
         }
     });
